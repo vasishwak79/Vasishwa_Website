@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Admin – Manage Admins</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_general.css">
+  <link rel="stylesheet" href="style_admin_manage.css">
+  <script src="admin_admins.js" defer></script>
+</head>
+
+<body class="admin-page">
+
+<header>
+  <h1 class="site-title">Admin Panel</h1>
+  <nav class="nav-right">
+    <a href="admin.html" class="nav-btn">Dashboard</a>
+    <a href="admin_admins.html" class="nav-btn active">Admins</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1 class="admin-title">Manage Admins</h1>
+  <p class="admin-subtitle">Add or remove admin accounts</p>
+
+  <div class="admin-form">
+
+    <h3>Add New Admin</h3>
+    <input type="text" id="new-admin-user" placeholder="Username">
+    <input type="password" id="new-admin-pass" placeholder="Password">
+
+    <div class="custom-select-wrapper">
+        <div class="custom-select" id="new-admin-role-trigger">
+            <span id="selected-role-text">Moderator</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="custom-options" id="custom-options">
+            <div class="custom-option selected" data-value="moderator">Moderator</div>
+            <div class="custom-option" data-value="super">Super Admin</div>
+        </div>
+        <input type="hidden" id="new-admin-role" value="moderator">
+    </div>
+
+    <button id="add-admin-btn">Add Admin</button>
+    <p id="admin-feedback" class="feedback"></p>
+  </div>
+
+  <h1 class="section-title">Existing Admins</h1>
+  <div id="admins-grid" class="admin-grid">
+  </div>
+</div>
+
+<footer>
+  <p class="fake-copy">© Lost & Found | Admin Panel</p>
+</footer>
+</body>
+</html>

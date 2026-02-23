@@ -1,0 +1,215 @@
+body {
+    font-family: "League Spartan", sans-serif;
+    background-color: #1d4e89; /* fallback background */
+    margin: 0;
+    padding: 0;
+}
+
+body.upload-page {
+    font-family: "League Spartan", sans-serif;
+    background-image: url('picture-for-claim-page.jpg');
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 600px;
+    min-height: auto;
+    margin: 8% auto; /* centers horizontally */
+    padding: 40px;
+    background-color: rgba(210, 202, 186, 0.603);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.upload-page .container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#upload-form {
+    display: flex;
+    flex-direction: column; /* Stacks everything vertically */
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: -10px; /* Brings label closer to its input */
+}
+
+.page-title {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.page-subtitle {
+    text-align:center;
+    font-size: 21px;
+    color: #3b9986;
+    margin-bottom: 25px;
+}
+
+.input-small{
+    background-color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: black;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+textarea.input-small {
+    height: 100px; /* Gives more room for the description */
+    resize: none;
+}
+
+.btn-primary {
+    background-color: #4F7F8A;
+    color: white;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 10px;
+    font-family: inherit;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3F6770;
+}
+
+.feedback {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.file-upload-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.file-upload-btn {
+    background-color: #4F7F8A;
+    color: white;
+    padding: 12px;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    font-size: medium;
+    font-family: inherit;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.file-upload-btn:hover {
+    background: #3F6770;
+}
+
+.file-name {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 0.95rem;
+    background: white;
+    padding: 0 12px;
+    border-radius: 10px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.image-preview {
+    margin-top: 20px;
+    width: 100%;
+    min-height: 220px;
+    padding: 15px;
+    border-radius: 24px;
+    object-fit: contain;
+    background-color: rgba(210, 202, 186, 0.25);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+  body.upload-page {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 20px 12px;
+  }
+
+  .upload-page .container {
+    max-width: 90%;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+
+  .page-subtitle {
+    font-size: 18px;
+    color: #3b9986;
+  }
+
+  .file-upload-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .file-upload-btn,
+  .file-name {
+    width: 100%;
+    height: 40px;
+  }
+
+  .image-preview {
+    min-height: 180px;
+    padding: 10px;
+  }
+
+}

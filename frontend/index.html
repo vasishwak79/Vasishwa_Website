@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Lost & Found | Home</title>
+  <link rel="stylesheet" href="style_general.css">
+  <link rel="stylesheet" href="style_index.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body class="home-page">
+
+  <!-- Header / Navigation -->
+  <header>
+    <h1 class="site-title">School Lost & Found</h1>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav-right">
+      <a href="index.html" class="nav-btn active">Home</a>
+      <a href="admin.html" class="nav-btn">Admin</a>
+
+      <!-- User Dropdown (ONLY when logged in) -->
+      <div id="user-menu" class="user-menu hidden">
+        <button class="user-btn">
+          <span id="username-display">User</span> ▼
+        </button>
+
+        <div class="dropdown-content">
+          <a href="profile.html" id="profileLink">Profile</a>
+          <a href="login.html">User Login</a>
+          <a href="#" id="logoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <section class="home">
+        
+        <h2>
+          <span class="home-title">Welcome to the</span>
+          <span class="home-title-highlight">School Lost and Found Website!</span>
+        </h2>
+
+        <p class="home-subtitle">
+          Lost something? Found something? Use this site to report found items, search for belongings, or claim what’s yours.
+        </p>
+
+        <div class="home-buttons">
+          <a href="upload.html" class="home-btn">Report an Item</a>
+          <a href="items.html" class="home-btn">Search for an Item</a>
+        </div>
+
+        <h2 class="home-title ">Recently Added Items</h2>
+        <div id="recent-items" class="item-grid"></div>
+      </section>
+
+      <section class="home1">
+        <p class="home-title-1">
+          Log into your account by clicking at the user button in the Navigation Menu or
+          <a href="login.html" class="link1">Click Here to Login.</a>
+        </p>
+
+        <p class="home-title-1">
+          New to the website?
+          <a href="signup.html" class="link1">Click Here to Sign Up.</a>
+        </p>
+
+        <p class="home-title-1">
+          Admins, login using the Admin button in the Navigation bar or 
+          <a href="admin_login.html" class="link1">Login by Clicking Here.</a>
+        </p>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="fake-copy">© 2025–2026 FBLA Website Coding & Development Project | Alliance Academy of Innovation</p>
+    <a href="citations.html" class="footer-link">Citations</a>
+  </footer>
+
+</body>
+</html>

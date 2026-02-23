@@ -1,0 +1,143 @@
+body {
+    font-family: "League Spartan", sans-serif;
+    background-color: #1d4e89; /* fallback background */
+    margin: 0;
+    padding: 0;
+}
+
+body.admin-login-page {
+    font-family: "League Spartan", sans-serif;
+    background-image: url('OB9S6K0.jpg');
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 400px;
+    min-height: auto;
+    margin: 8% auto; /* centers horizontally */
+    padding: 40px;
+    background-color: rgba(210, 202, 186, 0.577);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* Center login vertically */
+.admin-login-page .container {
+    max-width: 400px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+/* Title */
+.admin-login-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+#adminLoginForm section {
+    margin-bottom: 30px; /* Adjust this number for more or less space */ 
+}
+
+/* Labels */
+.form-label {
+  color: #2F7F6F;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: block;      /* Forces the input to start on a new line below the label */
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Inputs */
+.input-small {
+  background: white;
+  border: 2px solid transparent;
+  transition: 0.2s;
+  width: 100%;         /* Makes inputs fill the width of the card */
+  padding: 10px;
+  border-radius: 8px;
+  box-sizing: border-box; /* Ensures padding doesn't break the layout */
+}
+
+.input-small:focus {
+  outline: none;
+  border-color: #3F6770;
+  box-shadow: 0 0 0 2px rgba(29, 78, 137, 0.3);
+}
+
+/* Button */
+.btn-primary {
+    gap: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #4F7F8A;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3F6770;
+}
+
+
+/* Error / success message */
+.feedback {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Header spacing fix */
+.admin-login-page header {
+  margin-bottom: 20px;
+}
+
+/* Subtle animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+
+  body.admin-login-page {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .container {
+    width: 80%;
+    margin: 60px auto;
+    padding: 24px;
+  }
+
+  .admin-login-page h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn-primary {
+    padding: 14px;
+    font-size: 1rem;
+  }
+}

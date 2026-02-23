@@ -1,0 +1,191 @@
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: #1d4e89; /* fallback background */
+  margin: 0;
+  padding: 0;
+}
+
+body.admin-page {
+  font-family: "League Spartan", sans-serif;
+  background-image: url('OB9S6K0.jpg') !important;
+  background-size: 100% auto;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto; 
+  text-align: center;
+  padding: 40px;
+  background-color: rgba(210, 202, 186, 0.577);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Page Title */
+.admin-title {
+  text-align: center;
+  font-size: 38px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.admin-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #2F7F6F;
+  margin-bottom: 40px;
+}
+
+/* Sections */
+.admin-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 26px;
+  color: #000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 8px;
+}
+
+/* Grid layout */
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.item-card,
+.claim-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  text-align: center; 
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.item-card:hover,
+.claim-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Card content */
+.item-card h3,
+.claim-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.item-card p,
+.claim-card p {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.item-card img, 
+.claim-card img {
+  display: block;          
+  max-width: 100%;   
+  width: auto;    
+  height: auto;            
+  max-height: 200px;
+  margin: 10px auto; 
+  object-fit: contain; 
+  border-radius: 8px;
+}
+
+.item-card button,
+.claim-card button {
+  margin-top: 10px;
+  margin-right: 8px;
+  padding: 8px 14px;
+  border-radius: 18px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: background 0.2s;
+}
+
+/* Approve */
+.item-card button:first-of-type,
+.claim-card button:first-of-type {
+  background-color: #4F7F8A;
+  color: white;
+}
+
+.item-card button:first-of-type:hover,
+.claim-card button:first-of-type:hover {
+  background-color: #3F6770;
+}
+
+/* Decline */
+.item-card button:last-of-type,
+.claim-card button:last-of-type {
+  background-color: #9E4F4F;
+  color: white;
+}
+
+.item-card button:last-of-type:hover,
+.claim-card button:last-of-type:hover {
+  background-color: #7E3A3A;
+}
+
+@media (max-width: 768px) {
+
+  body.admin-page {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 20px 12px;
+  }
+
+  .admin-page .container {
+    max-width: 90%;
+  }
+
+  .admin-title {
+    font-size: 30px;
+  }
+
+  .admin-subtitle {
+    font-size: 16px;
+  }
+
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .item-card,
+  .claim-card {
+    padding: 15px;
+  }
+
+  .item-card button,
+  .claim-card button {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+}

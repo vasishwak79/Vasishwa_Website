@@ -1,0 +1,126 @@
+body {
+    font-family: "League Spartan", sans-serif;
+    background-color: #1d4e89; /* fallback background */
+    margin: 0;
+    padding: 0;
+}
+
+body.claim-page {
+    font-family: "League Spartan", sans-serif;
+    background-image: url('picture-for-claim-page.jpg');
+    background-size: 100% auto;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 600px;
+    min-height: auto;
+    margin: 8% auto; /* centers horizontally */
+    padding: 40px;
+    background-color: rgba(210, 202, 186, 0.603);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* Center claim vertically */
+.claim-page .container {
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#claim-form {
+    display: flex;
+    flex-direction: column; /* Stacks everything vertically */
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #000;
+    margin-bottom: -10px; /* Brings label closer to its input */
+}
+
+.page-title {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.input-small {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+textarea.input-small {
+    height: 100px; /* Gives more room for the description */
+    resize: none;
+}
+
+.btn-primary {
+    background-color: #4F7F8A;
+    color: white;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 10px;
+    font-family: inherit;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3F6770;
+}
+
+.feedback {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  body.claim-page {
+    background-size: cover;
+    background-attachment: scroll;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 20px 12px;
+  }
+
+  .claim-page .container {
+    max-width: 90%;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+
+  .input-small {
+    font-size: 16px;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+}

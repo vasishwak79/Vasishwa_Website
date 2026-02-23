@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_signup.css">
+  <link rel="stylesheet" href="style_general.css">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="signup-page">
+
+<!-- Navigation Bar -->
+  <header>
+    <h1 class="site-title">School Lost & Found</h1>
+
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+    <nav class="nav-right">
+      <a href="index.html" class="nav-btn ">Home</a>
+      <a href="admin.html" class="nav-btn ">Admin</a>
+
+      <!-- User Dropdown (ONLY when logged in) -->
+      <div id="user-menu" class="user-menu hidden">
+        <button class="user-btn">
+          <span id="username-display">User</span> ▼
+        </button>
+        <div class="dropdown-content">
+          <a href="profile.html" id="profileLink">Profile</a>
+          <a href="login.html">User Login</a>
+          <a href="#" id="logoutBtn">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<!-- main signup page container -->
+ <main class="container">
+  <section>
+    <!-- page title -->
+    <h2 class="user-style">User Signup</h2>
+
+    <!-- signup form card -->
+    <form id="signupForm" aria-label="Sign Up Form">
+
+      <section>
+        <label for="username" class="form-label">Username: </label>
+
+        <input 
+          id="username"
+          name="username" 
+          type="text" 
+          class="input-small"
+          placeholder="Enter username" 
+          required
+        >
+
+      </section>
+
+      <section>
+        <label for="Email" class="form-label">Email: </label>
+
+        <input 
+          id="email"
+          name="email" 
+          type="text" 
+          class="input-small"
+          placeholder="Enter Email" 
+          required
+        >
+
+      </section>
+
+      <section>
+        <label for="password" class="form-label">Password: </label>
+
+        <input 
+          id="password"
+          name="password" 
+          type="password" 
+          class="input-small"
+          placeholder="Enter password" 
+          required
+        >
+        
+      </section>
+
+      <section>
+        <button type="submit" class="btn-primary">Sign Up</button>
+      </section>
+
+    </form>
+    <!-- errer or success message-->
+    <p id="msg" class="feedback"></p>
+
+  </section>
+
+</main>
+
+<footer>
+  <p class="fake-copy">© 2026 School Lost & Found</p>
+</footer>
+
+<script src="signup.js"></script>
+</body>
+</html>

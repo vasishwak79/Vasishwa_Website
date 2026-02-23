@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Claim Item | Lost & Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_general.css">
+  <link rel="stylesheet" href="style_claim.css">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="claim.js" defer></script>
+</head>
+
+<body class="claim-page">
+
+<header>
+  <h1 class="site-title">School Lost & Found</h1>
+
+  <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+  <nav class="nav-right">
+    <a href="index.html" class="nav-btn">Home</a>
+    <a href="upload.html" class="nav-btn">Report Item</a>
+    <a href="items.html" class="nav-btn">View Items</a>
+    <a href="claim.html" class="nav-btn active">Claim Items</a>
+    <a href="admin_login.html" class="nav-btn">Admin</a>
+
+    <div id="user-menu" class="user-menu hidden">
+      <button class="user-btn">
+        <span id="username-display">User</span> ▼
+      </button>
+      <div class="dropdown-content">
+        <a href="profile.html" id="profileLink">Profile</a>
+        <a href="login.html">User Login</a>
+        <a href="#" id="logoutBtn">Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="container">
+  <h2 class="page-title">Claim an Item</h2>
+
+  <form id="claim-form" class="card form claim-card">
+    <label class="form-label">Your Name</label>
+    <input class="input-small" name="name" required>
+
+    <label class="form-label">Why is this yours?</label>
+    <textarea class="input-small" name="reason" required></textarea>
+
+    <label class="form-label">What unique features does this item have that you know of?</label>
+    <textarea class="input-small" name="features" required></textarea>
+
+    <label class="form-label">3rd Period Teacher</label>
+    <input class="input-small" name="teacher" required>
+
+    <button class="btn-primary">Submit Claim</button>
+  </form>
+
+  <p id="claim-message" class="feedback"></p>
+</section>
+
+<footer>
+  <p class="fake-copy">© 2026 School Lost & Found</p>
+</footer>
+
+</body>
+</html>
