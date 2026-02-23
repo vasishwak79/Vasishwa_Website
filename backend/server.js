@@ -6,6 +6,9 @@ const bcrypt = require("bcryptjs");
 const initDB = require("./db");
 
 const app = express();
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
 const upload = multer({ dest: "uploads/" });
 const SECRET = process.env.JWT_SECRET || "supersecretkey";
 
@@ -428,3 +431,4 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Backend running on port ${PORT}`);
 });
+
