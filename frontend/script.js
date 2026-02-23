@@ -7,7 +7,7 @@ if (localStorage.getItem("logoutMessage") === "true") {
   localStorage.removeItem("logoutMessage");
 }
 
-const API_URL = "http://localhost:4000/api";
+const API_URL = "https://www.kdmfind.com/api";
 
 let allItems = []; 
 let currentPage = 1;
@@ -260,3 +260,4 @@ if (navToggle && navMenu) {
     navMenu.classList.toggle("open");
   });
 }
+
